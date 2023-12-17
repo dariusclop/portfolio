@@ -7,4 +7,4 @@ The website is available at <https://dariusclop.github.io/portfolio/>
 ## Technologies used
 
  - Developed using ReactJS with TypeScript. 
- - UI Library chosen is MaterialUI using emotion style
+ - UI Library chosen is MaterialUI

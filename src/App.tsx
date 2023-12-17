@@ -1,12 +1,12 @@
+import { ThemeProvider } from '@mui/material'
 import {
     createBrowserRouter,
     RouteObject,
     RouterProvider,
 } from 'react-router-dom'
-import { Home, NotFound } from './pages'
 import { MainLayout } from './layouts'
+import { About, Contact, Home, NotFound, Projects } from './pages'
 import theme from './styles/theme/Theme'
-import { ThemeProvider } from '@mui/material'
 
 const routes: RouteObject[] = [
     {
@@ -16,6 +16,18 @@ const routes: RouteObject[] = [
             {
                 index: true,
                 element: <Home />,
+            },
+            {
+                path: '/about',
+                element: <About />,
+            },
+            {
+                path: '/projects',
+                element: <Projects />,
+            },
+            {
+                path: '/contact',
+                element: <Contact />,
             },
         ],
     },
