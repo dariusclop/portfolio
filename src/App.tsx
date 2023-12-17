@@ -5,6 +5,8 @@ import {
 } from 'react-router-dom'
 import { Home, NotFound } from './pages'
 import { MainLayout } from './layouts'
+import theme from './styles/theme/Theme'
+import { ThemeProvider } from '@mui/material'
 
 const routes: RouteObject[] = [
     {
@@ -24,7 +26,7 @@ const router = createBrowserRouter(routes, {
 })
 
 const App = () => {
-    return <RouterProvider router={router} />
+    return <ThemeProvider theme={theme}><RouterProvider router={router} /></ThemeProvider>
 }
 
 export default App
