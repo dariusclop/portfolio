@@ -1,10 +1,21 @@
-import { Avatar as AvatarMUI, Button as ButtonMUI, Typography as TypographyMUI } from "@mui/material";
-import { styled } from '@mui/system';
+import {
+    Avatar as AvatarMUI,
+    Button as ButtonMUI,
+    Typography as TypographyMUI,
+    styled,
+} from '@mui/material'
+
+const HeaderElement = styled('header')`
+    position: fixed;
+    width: 100%;
+    top: 0;
+`
 
 const Nav = styled('nav')`
     display: flex;
     padding: 1rem 2rem;
     align-items: center;
+    background-color: #ffffff;
 `
 
 const UL = styled('ul')`
@@ -22,12 +33,12 @@ const Button = styled(ButtonMUI)(({ theme }) => ({
     '&.isActive': {
         backgroundColor: theme.palette.primary.main,
     },
-  }));
+}))
 
 const Typography = styled(TypographyMUI)`
     font-weight: 500;
     letter-spacing: 0.02em;
 `
 
-export { Avatar, Button, Nav, Typography, UL };
+export { Avatar, Button, HeaderElement, Nav, Typography, UL }
 

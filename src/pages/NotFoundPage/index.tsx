@@ -1,5 +1,5 @@
 const NotFound = () => {
-    return <div>404 Not Found</div>
+    return <div style={{ color: '#ffffff'}}>404 Not Found</div>
 }
 
 export default NotFound;

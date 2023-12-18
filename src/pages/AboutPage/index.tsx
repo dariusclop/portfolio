@@ -1,5 +1,5 @@
 const About = () => {
-    return <div>About Page</div>
+    return <div style={{ color: '#ffffff'}}>About Page</div>
 }
 
 export default About;

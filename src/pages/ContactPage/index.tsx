@@ -1,5 +1,5 @@
 const Contact = () => {
-    return <div>Contact Page</div>
+    return <div style={{ color: '#ffffff'}}>Contact Page</div>
 }
 
 export default Contact;

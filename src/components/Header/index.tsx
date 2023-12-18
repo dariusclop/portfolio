@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import AvatarImage from '../../assets/avatarImage.png'
 import { MENU_ITEMS } from '../../utils/constants'
 import HeaderButton from './HeaderButton'
-import { Avatar, Nav, Typography, UL } from './styles'
+import { Avatar, HeaderElement, Nav, Typography, UL } from './styles'
 
 const Header = () => {
     const [isSelected, setIsSelected] = useState('Home')
@@ -30,7 +30,7 @@ const Header = () => {
     )
 
     return (
-        <header>
+        <HeaderElement>
             <Nav>
                 <Avatar src={AvatarImage} sx={{ width: 68, height: 68 }} />
                 <Typography>Darius-Alexandru Clop</Typography>
@@ -47,7 +47,7 @@ const Header = () => {
                     </li>
                 </UL>
             </Nav>
-        </header>
+        </HeaderElement>
     )
 }
 
