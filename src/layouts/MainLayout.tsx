@@ -7,9 +7,11 @@ import { Header } from '../components'
 const Main = styled('main')`
     width: 100%;
     min-height: calc(100% - 6.25rem);
-    padding-top: 100px;
+    padding-top: 6.25rem;
     background-image: url(${background});
     background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;

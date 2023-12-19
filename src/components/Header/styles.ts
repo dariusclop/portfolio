@@ -30,6 +30,7 @@ const Avatar = styled(AvatarMUI)`
 
 const Button = styled(ButtonMUI)(({ theme }) => ({
     color: '#000000',
+    minWidth: '6.25rem',
     '&.isActive': {
         backgroundColor: theme.palette.primary.main,
     },
