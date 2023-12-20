@@ -1,22 +1,29 @@
 import { styled } from '@mui/material'
 import { Fragment } from 'react'
 import { Outlet } from 'react-router-dom'
-import background from '../assets/background.png'
+import backgroundDesktop from '../assets/background-desktop.png'
+import backgroundMobile from '../assets/background-mobile.png'
 import { Header } from '../components'
 
-const Main = styled('main')`
-    width: 100%;
-    min-height: calc(100% - 6.25rem);
-    padding-top: 6.25rem;
-    background-image: url(${background});
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-    background-size: cover;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-`
+const Main = styled('main')(({ theme }) => ({
+    width: '100%',
+    minHeight: 'calc(100% - 6.25rem)',
+    paddingTop: '6.25rem',
+    backgroundRepeat: 'no-repeat',
+    backgroundAttachment: 'fixed',
+    backgroundPosition: 'center',
+    backgroundSize: 'cover',
+    WebkitBackgroundSize: 'cover',
+
+    [theme.breakpoints.down('md')]: {
+        backgroundImage: `url(${backgroundMobile})`,
+    },
+
+    [theme.breakpoints.up('md')]: {
+        backgroundImage: `url(${backgroundDesktop})`,
+        
+    },
+}))
 
 const MainLayout = () => {
     return (
