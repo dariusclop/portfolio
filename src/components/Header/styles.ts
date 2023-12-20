@@ -1,9 +1,13 @@
 import {
     Avatar as AvatarMUI,
+    Box,
     Button as ButtonMUI,
+    IconButton as IconButtonMUI,
+    List as ListMUI,
     Typography as TypographyMUI,
     styled,
 } from '@mui/material'
+import { Link as LinkRRD } from 'react-router-dom'
 
 const HeaderElement = styled('header')`
     position: fixed;
@@ -18,8 +22,7 @@ const Nav = styled('nav')`
     background-color: #ffffff;
 `
 
-const UL = styled('ul')`
-    list-style-type: none;
+const List = styled(ListMUI)`
     margin-left: auto;
 `
 
@@ -40,5 +43,22 @@ const Typography = styled(TypographyMUI)`
     letter-spacing: 0.02em;
 `
 
-export { Avatar, Button, HeaderElement, Nav, Typography, UL }
+const DrawerWrapper = styled(Box)`
+    width: 15.625rem;
+    color: #000000;
+`
+
+const IconButton = styled(IconButtonMUI)`
+    color: #000000;
+`
+
+const Link = styled(LinkRRD)`
+    width: 100%;
+    text-decoration: none;
+    :link, :visited {
+        color: #000000
+    }
+`
+
+export { Avatar, Button, DrawerWrapper, HeaderElement, IconButton, Link, List, Nav, Typography }
 

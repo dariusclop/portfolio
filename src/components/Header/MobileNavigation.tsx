@@ -1,16 +1,15 @@
 import { Menu as MenuIcon } from '@mui/icons-material'
 import {
     Box,
-    IconButton,
     List,
     ListItem,
     ListItemButton,
     ListItemText,
-    SwipeableDrawer,
+    SwipeableDrawer
 } from '@mui/material'
 import { Fragment, useMemo, useState } from 'react'
-import { Link } from 'react-router-dom'
 import { MENU_ITEMS } from '../../utils/constants'
+import { DrawerWrapper, IconButton, Link } from './styles'
 
 const MobileNavigation = () => {
     const [open, setOpen] = useState(false)
@@ -31,8 +30,7 @@ const MobileNavigation = () => {
 
     const createMenuItems = useMemo(
         () => (
-            <Box
-                sx={{ width: 250 }}
+            <DrawerWrapper
                 role="presentation"
                 onClick={toggleDrawer(false)}
                 onKeyDown={toggleDrawer(false)}
@@ -62,7 +60,7 @@ const MobileNavigation = () => {
                         </Link>
                     </ListItem>
                 </List>
-            </Box>
+            </DrawerWrapper>
         ),
         []
     )
