@@ -20,7 +20,6 @@ const Nav = styled('nav')`
 
 const UL = styled('ul')`
     list-style-type: none;
-    display: flex;
     margin-left: auto;
 `
 
