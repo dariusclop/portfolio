@@ -6,9 +6,8 @@ import backgroundMobile from '../assets/background-mobile.png'
 import { Header } from '../components'
 
 const Main = styled('main')(({ theme }) => ({
-    width: '100%',
     minHeight: 'calc(100% - 6.25rem)',
-    paddingTop: '6.25rem',
+    padding: '6.25rem 2rem 0',
     backgroundRepeat: 'no-repeat',
     backgroundAttachment: 'fixed',
     backgroundPosition: 'center',
@@ -21,7 +20,6 @@ const Main = styled('main')(({ theme }) => ({
 
     [theme.breakpoints.up('md')]: {
         backgroundImage: `url(${backgroundDesktop})`,
-        
     },
 }))
 

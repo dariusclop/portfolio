@@ -38,7 +38,11 @@ const router = createBrowserRouter(routes, {
 })
 
 const App = () => {
-    return <ThemeProvider theme={theme}><RouterProvider router={router} /></ThemeProvider>
+    return (
+        <ThemeProvider theme={theme}>
+            <RouterProvider router={router} />
+        </ThemeProvider>
+    )
 }
 
 export default App

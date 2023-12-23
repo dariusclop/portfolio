@@ -19,7 +19,6 @@ const Nav = styled('nav')`
     display: flex;
     padding: 1rem 2rem;
     align-items: center;
-    background-color: #ffffff;
 `
 
 const List = styled(ListMUI)`
@@ -31,7 +30,6 @@ const Avatar = styled(AvatarMUI)`
 `
 
 const Button = styled(ButtonMUI)(({ theme }) => ({
-    color: '#000000',
     minWidth: '6.25rem',
     '&.isActive': {
         backgroundColor: theme.palette.primary.main,
@@ -41,6 +39,7 @@ const Button = styled(ButtonMUI)(({ theme }) => ({
 const Typography = styled(TypographyMUI)`
     font-weight: 500;
     letter-spacing: 0.02em;
+    color: #ffffff;
 `
 
 const DrawerWrapper = styled(Box)`
@@ -49,7 +48,7 @@ const DrawerWrapper = styled(Box)`
 `
 
 const IconButton = styled(IconButtonMUI)`
-    color: #000000;
+    color: #ffffff;
 `
 
 const Link = styled(LinkRRD)`
