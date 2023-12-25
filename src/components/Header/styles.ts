@@ -7,7 +7,7 @@ import {
     Typography as TypographyMUI,
     styled,
 } from '@mui/material'
-import { Link as LinkRRD } from 'react-router-dom'
+import { Link as LinkRRD, NavLink as NavLinkRRD } from 'react-router-dom'
 
 const HeaderElement = styled('header')`
     position: fixed;
@@ -29,12 +29,15 @@ const Avatar = styled(AvatarMUI)`
     margin-right: 1rem;
 `
 
-const Button = styled(ButtonMUI)(({ theme }) => ({
-    minWidth: '6.25rem',
-    '&.isActive': {
+const NavLink = styled(NavLinkRRD)(({ theme }) => ({
+    '&.active button': {
         backgroundColor: theme.palette.primary.main,
     },
 }))
+
+const Button = styled(ButtonMUI)`
+    min-width: 6.25rem;
+`
 
 const Typography = styled(TypographyMUI)`
     font-weight: 500;
@@ -54,10 +57,22 @@ const IconButton = styled(IconButtonMUI)`
 const Link = styled(LinkRRD)`
     width: 100%;
     text-decoration: none;
-    :link, :visited {
-        color: #000000
+    :link,
+    :visited {
+        color: #000000;
     }
 `
 
-export { Avatar, Button, DrawerWrapper, HeaderElement, IconButton, Link, List, Nav, Typography }
+export {
+    Avatar,
+    Button,
+    DrawerWrapper,
+    HeaderElement,
+    IconButton,
+    Link,
+    List,
+    Nav,
+    NavLink,
+    Typography
+}
 

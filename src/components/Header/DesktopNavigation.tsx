@@ -1,32 +1,21 @@
 import { ListItem } from '@mui/material'
-import { useMemo, useState } from 'react'
+import { useMemo } from 'react'
 import { Link } from 'react-router-dom'
 import { MENU_ITEMS } from '../../utils/constants'
 import HeaderButton from './HeaderButton'
-import { List } from './styles'
+import { List, NavLink } from './styles'
 
 const DesktopNavigation = () => {
-    const [isSelected, setIsSelected] = useState('Home')
-
-    const handleSelect = (item: string): void => {
-        setIsSelected(item)
-    }
-
     const createMenuItems = useMemo(
         () =>
             MENU_ITEMS.map((item, index) => (
                 <ListItem key={`menu-item-${index}-${item}`} disablePadding>
-                    <Link to={`${item.pageUrl}`}>
-                        <HeaderButton
-                            isSelected={isSelected === item.title}
-                            onClick={() => handleSelect(item.title)}
-                        >
-                            {item.title}
-                        </HeaderButton>
-                    </Link>
+                    <NavLink to={`${item.pageUrl}`}>
+                        <HeaderButton>{item.title}</HeaderButton>
+                    </NavLink>
                 </ListItem>
             )),
-        [isSelected]
+        []
     )
 
     return (

@@ -1,18 +1,12 @@
 import { Button, Typography } from './styles'
 
 type ButtonProps = {
-    isSelected?: boolean
-    onClick?: () => void 
     children: React.ReactNode
 }
 
-const HeaderButton = ({
-    isSelected = false,
-    onClick = () => {},
-    children,
-}: ButtonProps) => {
+const HeaderButton = ({ children }: ButtonProps) => {
     return (
-        <Button className={isSelected ? 'isActive' : ''} onClick={onClick}>
+        <Button>
             <Typography>{children}</Typography>
         </Button>
     )
